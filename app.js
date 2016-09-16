@@ -611,6 +611,17 @@ function sendButtonMessage(recipientId) {
                url: "https://product-staging.digicelgroup.com/selfcare3/img/whatsnew/jamltepre.png",
                title: "Buy Now",
              }]
+           },
+           {
+             title: "LTE Prepaid Smart Plan",
+             subtitle: "1GB - 7 Days for 900$",
+             item_url: "https://product-staging.digicelgroup.com/selfcare3/img/whatsnew/jamltepre.png",
+             image_url: SERVER_URL + "/assets/jamltepre.png",
+             buttons: [{
+               type: "web_url",
+               url: "https://product-staging.digicelgroup.com/selfcare3/img/whatsnew/jamltepre.png",
+               title: "Buy Now",
+             }]
            }]
          }
        }
