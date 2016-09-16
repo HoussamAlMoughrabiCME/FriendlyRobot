@@ -594,24 +594,10 @@ function sendButtonMessage(recipientId) {
              title: "3 Day 80 MB",
              subtitle: "80.00 JMD",
              item_url: "https://www.oculus.com/en-us/touch/",
-             image_url: SERVER_URL + "/assets/touch.png",
+             image_url: SERVER_URL + "/assets/jamjackpot.png",
              buttons: [{
                type: "postback",
                title: "Buy Now",
-               payload: "Payload for second bubble",
-             }]
-           }, {
-             title: "touch",
-             subtitle: "Your Hands, Now in VR",
-             item_url: "https://www.oculus.com/en-us/touch/",
-             image_url: SERVER_URL + "/assets/touch.png",
-             buttons: [{
-               type: "web_url",
-               url: "https://www.oculus.com/en-us/touch/",
-               title: "Open Web URL"
-             }, {
-               type: "postback",
-               title: "Call Postback",
                payload: "Payload for second bubble",
              }]
            }]
