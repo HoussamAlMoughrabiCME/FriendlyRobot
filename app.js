@@ -591,9 +591,9 @@ function sendButtonMessage(recipientId) {
          payload: {
            template_type: "generic",
            elements: [{
-             title: "3 Day 80 MB",
-             subtitle: "80.00 JMD",
-             item_url: "https://www.oculus.com/en-us/touch/",
+             title: "Be A Millionaire",
+             subtitle: "1st Grand Prize 2,000,000 USD",
+             item_url: "https://product-staging.digicelgroup.com/selfcare3/img/whatsnew/jamjackpot.png",
              image_url: SERVER_URL + "/assets/jamjackpot.png",
              buttons: [{
                type: "postback",
