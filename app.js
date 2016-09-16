@@ -255,6 +255,12 @@ function receivedMessage(event) {
     // keywords and send back the corresponding example. Otherwise, just echo
     // the text we received.
     switch (messageText.toLowerCase()) {
+
+    //Customized For CME BOT
+    case 'plans':
+    sendPlansMessage(senderId);
+    break;
+    // ./ Customized For CME BOT
       case 'image':
         sendImageMessage(senderID);
         break;
@@ -572,6 +578,52 @@ function sendButtonMessage(recipientId) {
  * Send a Structured Message (Generic Message type) using the Send API.
  *
  */
+
+ // CME Customized
+ function sendPlansMessage(recipientId) {
+   var messageData = {
+     recipient: {
+       id: recipientId
+     },
+     message: {
+       attachment: {
+         type: "template",
+         payload: {
+           template_type: "generic",
+           elements: [{
+             title: "3 Day 80 MB",
+             subtitle: "80.00 JMD",
+             item_url: "#",
+             //image_url: SERVER_URL + "/assets/rift.png",
+             image_url:"https://product-staging.digicelgroup.com/selfcare3/img/digicelsportsmax_promo.png",
+             buttons: [{
+               type: "postback",
+               title: "Buy",
+               payload: "Payload for first bubble",
+             }],
+           },
+           {
+             title: "3 Day 80 MB",
+             subtitle: "80.00 JMD",
+             item_url: "#",
+             //image_url: SERVER_URL + "/assets/rift.png",
+             image_url:"https://product-staging.digicelgroup.com/selfcare3/img/digicelsportsmax_promo.png",
+             buttons: [{
+               type: "postback",
+               title: "Buy",
+               payload: "Payload for first bubble",
+             }],
+           }
+
+         ]
+         }
+       }
+     }
+   };
+
+   callSendAPI(messageData);
+ }
+ // /. CME Customized
 function sendGenericMessage(recipientId) {
   var messageData = {
     recipient: {
