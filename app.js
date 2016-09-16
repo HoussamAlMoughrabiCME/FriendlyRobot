@@ -592,13 +592,24 @@ function sendButtonMessage(recipientId) {
            template_type: "generic",
            elements: [{
              title: "Be A Millionaire",
-             subtitle: "1st Grand Prize 2,000,000 USD",
+             subtitle: "1st Grand Prize 2,000,000$",
              item_url: "https://product-staging.digicelgroup.com/selfcare3/img/whatsnew/jamjackpot.png",
              image_url: SERVER_URL + "/assets/jamjackpot.png",
              buttons: [{
-               type: "postback",
+               type: "web_url",
+               url: "https://product-staging.digicelgroup.com/selfcare3/img/whatsnew/jamjackpot.png",
                title: "Buy Now",
-               payload: "Payload for second bubble",
+             }]
+           },
+           {
+             title: "LTE Prepaid Smart Plan",
+             subtitle: "1GB - 7 Days for 900$",
+             item_url: "https://product-staging.digicelgroup.com/selfcare3/img/whatsnew/jamltepre.png",
+             image_url: SERVER_URL + "/assets/jamltepre.png",
+             buttons: [{
+               type: "web_url",
+               url: "https://product-staging.digicelgroup.com/selfcare3/img/whatsnew/jamltepre.png",
+               title: "Buy Now",
              }]
            }]
          }
