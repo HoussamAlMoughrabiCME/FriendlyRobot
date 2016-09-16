@@ -258,7 +258,7 @@ function receivedMessage(event) {
 
     //Customized For CME BOT
     case 'plans':
-    sendPlansMessage(senderId);
+    sendPlansMessage(senderID);
     break;
     // ./ Customized For CME BOT
       case 'image':
