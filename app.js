@@ -605,7 +605,7 @@ function sendButtonMessage(recipientId) {
            text: "Hey John, how can I help you?",
            buttons:[{
              type: "postback",
-             title: "My Plans",
+             title: "Offer Plans",
              payload: "PLANS_PAYLOAD"
            }, {
              type: "postback",
@@ -613,8 +613,8 @@ function sendButtonMessage(recipientId) {
              payload: "BALANCE_PAYLOAD"
            }, {
              type: "postback",
-             title: "Recharge",
-             payload: "DEVELOPED_DEFINED_PAYLOAD"
+             title: "Add Credits",
+             payload: "ADD_CREDITS_PAYLOAD"
            }]
          }
        }
