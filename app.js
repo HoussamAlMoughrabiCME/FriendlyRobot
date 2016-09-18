@@ -315,7 +315,7 @@ function receivedMessage(event) {
 
       default:
         sendTextMessage(senderID, "Hey John, how can I help you?");
-        sendWelcomeMessage(senderID);
+        sendAccountOptionsMessage(senderID);
         sendOffersMessage(senderID);
     }
   } else if (messageAttachments) {
@@ -373,14 +373,28 @@ function receivedPostback(event) {
   // let them know it was successful
 
   //CME Customized
-  if(payload=="PLANS_PAYLOAD")
-  {
+  switch (payload) {
+    case "PLANS_PAYLOAD":
     sendTextMessage(senderID, "Offer Plans");
     sendPlansMessage(senderID);
-  }
-  else{
+    break;
+
+    case "BALANCE_AND_ACTIVE_PLANS_PAYLOAD":
+    sendTextMessage(senderID, "Your Balance:\nMain Balance: 351.91JMD - 660 min(s) left\n\nOther Balances:\nData Remaining: 0.00 MB\nLoyalty Credit: 7.65 JMD\nInternational Minutes: 660 min(s)");
+    break;
+
+    default:
       sendTextMessage(senderID, "Postback called");
   }
+
+  //if(payload=="PLANS_PAYLOAD")
+  //{
+
+  //}
+  //if(payload=="")
+  //else{
+//      sendTextMessage(senderID, "Postback called");
+//  }
   //CME Customized
 }
 
@@ -617,7 +631,7 @@ function sendButtonMessage(recipientId) {
    callSendAPI(messageData);
  }
 
- function sendWelcomeMessage(recipientId)
+ function sendAccountOptionsMessage(recipientId)
  {
    var messageData = {
      recipient: {
