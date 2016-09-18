@@ -628,7 +628,7 @@ function sendButtonMessage(recipientId) {
          type: "template",
          payload: {
            template_type: "button",
-           text: "Hey John, how can I help you?",
+           text: "Hey "+ recipientId +", how can I help you?",
            buttons:[{
              type: "postback",
              title: "Offer Plans",
