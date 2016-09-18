@@ -381,6 +381,8 @@ function receivedPostback(event) {
 
     case "BALANCE_AND_ACTIVE_PLANS_PAYLOAD":
     sendTextMessage(senderID, "Main Balance: 351.91JMD - 660 min(s) left\n\nOther Balances:\nData Remaining: 0.00 MB\nLoyalty Credit: 7.65 JMD\nInternational Minutes: 660 min(s)");
+    sendTextMessage(senderID,"Active Plans");
+    sendActivePlansMessage(senderID);
     break;
 
     default:
@@ -663,6 +665,42 @@ function sendButtonMessage(recipientId) {
    callSendAPI(messageData);
 
  }
+function sendActivePlansMessage(recipientId)
+{
+  var messageData = {
+    recipient: {
+      id: recipientId
+    },
+    "message": {
+       "attachment": {
+         "type": "template",
+         "payload": {
+           "template_type": "generic",
+           "elements": [{
+             "title": "D'Music Premium Plan",
+             "subtitle": "Valid till 30/09/2016 08:05PM",
+             "buttons": [{
+               "type": "web_url",
+               "url": "https://product-staging.digicelgroup.com",
+               "title": "Manage"
+             }]
+           },
+           {
+             "title": "In'tl 1000",
+             "subtitle": "Valid till 29/09/2016 11:15AM",
+             "buttons": [{
+               "type": "web_url",
+               "url": "https://product-staging.digicelgroup.com",
+               "title": "Manage"
+             }]
+           }]
+         }
+       }
+     }
+  };
+
+  callSendAPI(messageData);
+}
 
  function sendPlansMessage(recipientId) {
    var messageData = {
