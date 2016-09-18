@@ -602,7 +602,7 @@ function sendButtonMessage(recipientId) {
        attachment: {
          type: "template",
          payload: {
-           template_type: "button",
+           template_type: "button_s",
            text: "",
            buttons:[{
              type: "postback",
