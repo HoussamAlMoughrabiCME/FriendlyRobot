@@ -315,8 +315,8 @@ function receivedMessage(event) {
 
       default:
         sendTextMessage(senderID, "Hey John, how can I help you?");
-        sendAccountOptionsMessage(senderID);
         sendOffersMessage(senderID);
+        sendAccountOptionsMessage(senderID);
     }
   } else if (messageAttachments) {
     sendTextMessage(senderID, "Message with attachment received");
