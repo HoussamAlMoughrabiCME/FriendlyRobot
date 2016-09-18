@@ -245,7 +245,14 @@ function receivedMessage(event) {
     console.log("Quick reply for message %s with payload %s",
       messageId, quickReplyPayload);
 
-    sendTextMessage(senderID, "Quick reply tapped");
+      switch (quickReplyPayload) {
+        case "CREDIT_AMOUNT_PAYLOAD":
+          sendTextMessage(senderID, "Customer line has been successfully recharged.");
+           break;
+        default:
+          sendTextMessage(senderID, "Quick reply tapped");
+      }
+
     return;
   }
 
