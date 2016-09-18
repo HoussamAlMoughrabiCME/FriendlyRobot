@@ -613,10 +613,6 @@ function sendButtonMessage(recipientId) {
              payload: "BALANCE_PAYLOAD"
            }, {
              type: "postback",
-             title: "Add Credits",
-             payload: "ADD_CREDITS_PAYLOAD"
-           }, {
-             type: "postback",
              title: "Send Credits and Plan Gifting",
              payload: "SEND_CREDITS_PAYLOAD"
            }]
