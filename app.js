@@ -254,6 +254,8 @@ function receivedMessage(event) {
     // If we receive a text message, check to see if it matches any special
     // keywords and send back the corresponding example. Otherwise, just echo
     // the text we received.
+    if(messageText.toLowerCase().indexOf("#v")==-1)
+    {
     switch (messageText.toLowerCase()) {
 
     //Customized For CME BOT
@@ -318,6 +320,11 @@ function receivedMessage(event) {
         sendOffersMessage(senderID);
         sendAccountOptionsMessage(senderID);
     }
+  }
+  else {
+    sendTextMessage(senderID, "Your account have been refilled!");
+  }
+
   } else if (messageAttachments) {
     sendTextMessage(senderID, "Message with attachment received");
   }
