@@ -380,7 +380,7 @@ function receivedPostback(event) {
     break;
 
     case "BALANCE_AND_ACTIVE_PLANS_PAYLOAD":
-    sendTextMessage(senderID, "Your Balance:\nMain Balance: 351.91JMD - 660 min(s) left\n\nOther Balances:\nData Remaining: 0.00 MB\nLoyalty Credit: 7.65 JMD\nInternational Minutes: 660 min(s)");
+    sendTextMessage(senderID, "Main Balance: 351.91JMD - 660 min(s) left\n\nOther Balances:\nData Remaining: 0.00 MB\nLoyalty Credit: 7.65 JMD\nInternational Minutes: 660 min(s)");
     break;
 
     default:
@@ -617,7 +617,7 @@ function sendButtonMessage(recipientId) {
          type: "template",
          payload: {
            template_type: "button",
-           text: "Check also our latest offers:",
+           text: "Our latest offers:",
            buttons:[{
              type: "postback",
              title: "Offer Plans",
