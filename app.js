@@ -592,19 +592,19 @@ function sendButtonMessage(recipientId) {
          type: "template",
          payload: {
            template_type: "button",
-           text: "This is test text",
+           text: "Hey John, how can I help you?",
            buttons:[{
-             type: "web_url",
-             url: "https://www.oculus.com/en-us/rift/",
-             title: "Open Web URL"
-           }, {
              type: "postback",
-             title: "Trigger Postback",
+             title: "My Plans",
              payload: "DEVELOPED_DEFINED_PAYLOAD"
            }, {
-             type: "phone_number",
-             title: "Call Phone Number",
-             payload: "+16505551234"
+             type: "postback",
+             title: "My Balance",
+             payload: "DEVELOPED_DEFINED_PAYLOAD"
+           }, {
+             type: "postback",
+             title: "Recharge",
+             payload: "DEVELOPED_DEFINED_PAYLOAD"
            }]
          }
        }
