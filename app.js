@@ -314,7 +314,6 @@ function receivedMessage(event) {
         break;
 
       default:
-      
         sendTextMessage(senderID, "Hey John, how can I help you?");
         sendOffersMessage(senderID);
         sendAccountOptionsMessage(senderID);
@@ -384,10 +383,6 @@ function receivedPostback(event) {
     sendTextMessage(senderID, "Main Balance: 351.91JMD - 660 min(s) left\n\nOther Balances:\nData Remaining: 0.00 MB\nLoyalty Credit: 7.65 JMD\nInternational Minutes: 660 min(s)\n\nActive Plans:");
     //sendTextMessage(senderID,"Active Plans");
     sendActivePlansMessage(senderID);
-    break;
-
-    case "ADD_CREDITS_PAYLOAD"
-    sendTextMessage(senderID,"Please enter your 14-digits voucher code followed by #v");
     break;
 
     default:
