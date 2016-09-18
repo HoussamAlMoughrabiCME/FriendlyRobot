@@ -380,8 +380,8 @@ function receivedPostback(event) {
     break;
 
     case "BALANCE_AND_ACTIVE_PLANS_PAYLOAD":
-    sendTextMessage(senderID, "Main Balance: 351.91JMD - 660 min(s) left\n\nOther Balances:\nData Remaining: 0.00 MB\nLoyalty Credit: 7.65 JMD\nInternational Minutes: 660 min(s)");
-    sendTextMessage(senderID,"Active Plans");
+    sendTextMessage(senderID, "Main Balance: 351.91JMD - 660 min(s) left\n\nOther Balances:\nData Remaining: 0.00 MB\nLoyalty Credit: 7.65 JMD\nInternational Minutes: 660 min(s)\n\nActive Plans:");
+    //sendTextMessage(senderID,"Active Plans");
     sendActivePlansMessage(senderID);
     break;
 
