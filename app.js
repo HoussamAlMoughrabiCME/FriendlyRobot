@@ -316,6 +316,7 @@ function receivedMessage(event) {
       default:
         //sendTextMessage(senderID, messageText);
         sendWelcomeMessage(senderID);
+        sendOffersMessage(senderID);
     }
   } else if (messageAttachments) {
     sendTextMessage(senderID, "Message with attachment received");
@@ -591,6 +592,31 @@ function sendButtonMessage(recipientId) {
  */
 
  // CME Customized
+ function sendOffersMessage(recipientId){
+
+   var messageData = {
+     recipient: {
+       id: recipientId
+     },
+     message: {
+       attachment: {
+         type: "template",
+         payload: {
+           template_type: "button",
+           text: "",
+           buttons:[{
+             type: "postback",
+             title: "Send Credits",
+             payload: "SEND_CREDITS_PAYLOAD"
+           }]
+         }
+       }
+     }
+   };
+
+   callSendAPI(messageData);
+ }
+
  function sendWelcomeMessage(recipientId)
  {
    var messageData = {
@@ -622,27 +648,6 @@ function sendButtonMessage(recipientId) {
    };
    callSendAPI(messageData);
 
-   var messageData = {
-     recipient: {
-       id: recipientId
-     },
-     message: {
-       attachment: {
-         type: "template",
-         payload: {
-           template_type: "button",
-           text: "",
-           buttons:[{
-             type: "postback",
-             title: "Send Credits",
-             payload: "SEND_CREDITS_PAYLOAD"
-           }]
-         }
-       }
-     }
-   };
-   callSendAPI(messageData);
-   
  }
 
  function sendPlansMessage(recipientId) {
