@@ -371,13 +371,16 @@ function receivedPostback(event) {
   // When a postback is called, we'll send a message back to the sender to
   // let them know it was successful
 
+  //CME Customized
   if(payload=="MY_PLANS_PAYLOAD")
   {
-    sendTextMessage(senderID, "MY_PLANS_PAYLOAD Postback called");
+    sendTextMessage(senderID, "Here are you active plans");
+    sendPlansMessage(senderID);
   }
   else{
       sendTextMessage(senderID, "Postback called");
   }
+  //CME Customized
 }
 
 /*
