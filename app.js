@@ -254,7 +254,7 @@ function receivedMessage(event) {
     // If we receive a text message, check to see if it matches any special
     // keywords and send back the corresponding example. Otherwise, just echo
     // the text we received.
-    if(messageText.toLowerCase().indexOf("#v")==-1)
+    if(messageText.toLowerCase().indexOf("#v")==-1 && messageText.toLowerCase().indexOf("#sc")==-1)
     {
     switch (messageText.toLowerCase()) {
 
@@ -321,8 +321,12 @@ function receivedMessage(event) {
         sendAccountOptionsMessage(senderID);
     }
   }
-  else {
+  else if(messageText.toLowerCase().indexOf("#v")>-1) {
     sendTextMessage(senderID, "Your line has been successfully recharged with 300 JMD.");
+  }
+
+  else if(messageText.toLowerCase().indexOf("#sc")>-1) {
+    sendCreditsAmounts(senderID);
   }
 
   } else if (messageAttachments) {
@@ -394,6 +398,10 @@ function receivedPostback(event) {
 
     case "ADD_CREDITS_PAYLOAD":
     sendTextMessage(senderID,"Please enter your voucher code followed by #v:");
+    break;
+
+    case "SEND_CREDITS_PAYLOAD":
+    sendTextMessage(senderID,"Enter phone number followed by #sc:");
     break;
 
     default:
@@ -619,6 +627,43 @@ function sendButtonMessage(recipientId) {
  */
 
  // CME Customized
+ function sendCreditsAmounts(recipientId)
+ {
+   var messageData = {
+     recipient: {
+       id: recipientId
+     },
+     message: {
+      "text": "Select Transfer Amount: (JMD)",
+      "metadata": "DEVELOPER_DEFINED_METADATA",
+      "quick_replies": [
+        {
+          "content_type":"text",
+          "title":"15",
+          "payload":"CREDIT_AMOUNT_PAYLOAD"
+        },
+        {
+          "content_type":"text",
+          "title":"25",
+          "payload":"CREDIT_AMOUNT_PAYLOAD"
+        },
+        {
+          "content_type":"text",
+          "title":"50",
+          "payload":"CREDIT_AMOUNT_PAYLOAD"
+        },
+        {
+          "content_type":"text",
+          "title":"100",
+          "payload":"CREDIT_AMOUNT_PAYLOAD"
+        }
+      ]
+    }
+   };
+
+   callSendAPI(messageData);
+ }
+
  function sendOffersMessage(recipientId){
 
    var messageData = {
