@@ -314,9 +314,9 @@ function receivedMessage(event) {
         break;
 
       default:
-      sendTextMessage(senderID, "Hey John, how can I help you?");
-      sendOffersMessage(senderID);
-      sendAccountOptionsMessage(senderID);
+        sendTextMessage(senderID, "Hey John, how can I help you?");
+        sendOffersMessage(senderID);
+        sendAccountOptionsMessage(senderID);
     }
   } else if (messageAttachments) {
     sendTextMessage(senderID, "Message with attachment received");
