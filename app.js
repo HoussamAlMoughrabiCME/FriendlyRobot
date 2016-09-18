@@ -314,7 +314,7 @@ function receivedMessage(event) {
         break;
 
       default:
-        //sendTextMessage(senderID, messageText);
+        sendTextMessage(senderID, "Hey John, how can I help you?");
         sendWelcomeMessage(senderID);
         sendOffersMessage(senderID);
     }
