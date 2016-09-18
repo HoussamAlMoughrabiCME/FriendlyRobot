@@ -388,15 +388,6 @@ function receivedPostback(event) {
     default:
       sendTextMessage(senderID, "Postback called");
   }
-
-  //if(payload=="PLANS_PAYLOAD")
-  //{
-
-  //}
-  //if(payload=="")
-  //else{
-//      sendTextMessage(senderID, "Postback called");
-//  }
   //CME Customized
 }
 
