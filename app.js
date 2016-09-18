@@ -631,7 +631,7 @@ function sendButtonMessage(recipientId) {
            text: "Your account options:",
            buttons:[{
              type: "postback",
-             title: "Balance & Active Plans",
+             title: "My Balance & Plans",
              payload: "BALANCE_AND_ACTIVE_PLANS_PAYLOAD"
            }, {
              type: "postback",
