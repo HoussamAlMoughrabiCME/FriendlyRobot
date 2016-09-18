@@ -603,11 +603,11 @@ function sendButtonMessage(recipientId) {
          type: "template",
          payload: {
            template_type: "button",
-           text: "Check also our latest offers",
+           text: "Check also our latest offers:",
            buttons:[{
              type: "postback",
-             title: "Send Credits",
-             payload: "SEND_CREDITS_PAYLOAD"
+             title: "Offer Plans",
+             payload: "PLANS_PAYLOAD"
            }]
          }
        }
@@ -628,19 +628,19 @@ function sendButtonMessage(recipientId) {
          type: "template",
          payload: {
            template_type: "button",
-           text: "Hey "+ recipientId +", how can I help you?",
+           text: "Your account options:",
            buttons:[{
              type: "postback",
-             title: "Offer Plans",
-             payload: "PLANS_PAYLOAD"
-           }, {
-             type: "postback",
-             title: "Balance",
-             payload: "BALANCE_PAYLOAD"
+             title: "Balance & Active Plans",
+             payload: "BALANCE_AND_ACTIVE_PLANS_PAYLOAD"
            }, {
              type: "postback",
              title: "Add Credits",
              payload: "ADD_CREDITS_PAYLOAD"
+           }, {
+             type: "postback",
+             title: "Send Credits",
+             payload: "SEND_CREDITS_PAYLOAD"
            }]
          }
        }
