@@ -615,6 +615,11 @@ function sendButtonMessage(recipientId) {
              type: "postback",
              title: "Add Credits",
              payload: "ADD_CREDITS_PAYLOAD"
+           }],
+           buttons:[{
+             type: "postback",
+             title: "Send Credits",
+             payload: "SEND_CREDITS_PAYLOAD"
            }]
          }
        }
