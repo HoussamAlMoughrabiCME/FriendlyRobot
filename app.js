@@ -370,7 +370,14 @@ function receivedPostback(event) {
 
   // When a postback is called, we'll send a message back to the sender to
   // let them know it was successful
-  sendTextMessage(senderID, "Postback called");
+
+  if(payload=="MY_PLANS_PAYLOAD")
+  {
+    sendTextMessage(senderID, "MY_PLANS_PAYLOAD Postback called");
+  }
+  else{
+      sendTextMessage(senderID, "Postback called");
+  }
 }
 
 /*
@@ -596,7 +603,7 @@ function sendButtonMessage(recipientId) {
            buttons:[{
              type: "postback",
              title: "My Plans",
-             payload: "DEVELOPED_DEFINED_PAYLOAD"
+             payload: "MY_PLANS_PAYLOAD"
            }, {
              type: "postback",
              title: "My Balance",
