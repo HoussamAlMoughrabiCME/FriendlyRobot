@@ -385,6 +385,10 @@ function receivedPostback(event) {
     sendActivePlansMessage(senderID);
     break;
 
+    case "ADD_CREDITS_PAYLOAD"
+    sendTextMessage(senderID,"Please enter your 14-digits voucher code followed by #v");
+    break;
+
     default:
       sendTextMessage(senderID, "Postback called");
   }
