@@ -314,6 +314,7 @@ function receivedMessage(event) {
         break;
 
       default:
+      
         sendTextMessage(senderID, "Hey John, how can I help you?");
         sendOffersMessage(senderID);
         sendAccountOptionsMessage(senderID);
