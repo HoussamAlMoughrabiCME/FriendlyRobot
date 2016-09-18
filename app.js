@@ -322,7 +322,7 @@ function receivedMessage(event) {
     }
   }
   else {
-    sendTextMessage(senderID, "Your account have been refilled!");
+    sendTextMessage(senderID, "Your line has been successfully recharged with 300 JMD.");
   }
 
   } else if (messageAttachments) {
