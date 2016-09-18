@@ -374,7 +374,7 @@ function receivedPostback(event) {
   //CME Customized
   if(payload=="PLANS_PAYLOAD")
   {
-    sendTextMessage(senderID, "Here are your plans");
+    sendTextMessage(senderID, "Offer Plans");
     sendPlansMessage(senderID);
   }
   else{
@@ -602,25 +602,19 @@ function sendButtonMessage(recipientId) {
          type: "template",
          payload: {
            template_type: "button",
-           text: "Hey John, how can I help you ?",
-           buttons:[
-             {
-               type: "postback",
-               title: "Offer Plans",
-               payload: "PLANS_PAYLOAD"
-             },
-             {
+           text: "Hey John, how can I help you?",
+           buttons:[{
              type: "postback",
              title: "My Plans",
-             payload: "MY_PLANS_PAYLOAD"
+             payload: "PLANS_PAYLOAD"
            }, {
              type: "postback",
              title: "My Balance",
              payload: "BALANCE_PAYLOAD"
            }, {
              type: "postback",
-             title: "Send Credit Plan Gifting",
-             payload: "SEND_CREDIT_PLAN_GIFTING_PAYLOAD"
+             title: "Recharge",
+             payload: "DEVELOPED_DEFINED_PAYLOAD"
            }]
          }
        }
