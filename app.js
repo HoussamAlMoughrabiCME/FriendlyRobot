@@ -602,8 +602,8 @@ function sendButtonMessage(recipientId) {
        attachment: {
          type: "template",
          payload: {
-           template_type: "button_s",
-           text: "",
+           template_type: "button",
+           text: "Check also our latest offers",
            buttons:[{
              type: "postback",
              title: "Send Credits",
