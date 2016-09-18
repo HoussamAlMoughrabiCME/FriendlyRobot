@@ -619,7 +619,7 @@ function sendButtonMessage(recipientId) {
              payload: "BALANCE_PAYLOAD"
            }, {
              type: "postback",
-             title: "Send Credit/Plan Gifting",
+             title: "Send Credit Plan Gifting",
              payload: "SEND_CREDIT_PLAN_GIFTING_PAYLOAD"
            }]
          }
