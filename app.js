@@ -615,7 +615,23 @@ function sendButtonMessage(recipientId) {
              type: "postback",
              title: "Add Credits",
              payload: "ADD_CREDITS_PAYLOAD"
-           }],
+           }]
+         }
+       }
+     }
+   };
+   callSendAPI(messageData);
+
+   var messageData = {
+     recipient: {
+       id: recipientId
+     },
+     message: {
+       attachment: {
+         type: "template",
+         payload: {
+           template_type: "button",
+           text: "",
            buttons:[{
              type: "postback",
              title: "Send Credits",
@@ -626,6 +642,7 @@ function sendButtonMessage(recipientId) {
      }
    };
    callSendAPI(messageData);
+   
  }
 
  function sendPlansMessage(recipientId) {
