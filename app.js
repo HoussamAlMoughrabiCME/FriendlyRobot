@@ -314,16 +314,9 @@ function receivedMessage(event) {
         break;
 
       default:
-      if(messageText.toLowerCase().indexOf("#v")>-1)
-      {
-          sendTextMessage(senderID, "Reffiled!");
-      }
-      else
-      {
-          sendTextMessage(senderID, "Hey John, how can I help you?");
-          sendOffersMessage(senderID);
-          sendAccountOptionsMessage(senderID);
-      }
+      sendTextMessage(senderID, "Hey John, how can I help you?");
+      sendOffersMessage(senderID);
+      sendAccountOptionsMessage(senderID);
     }
   } else if (messageAttachments) {
     sendTextMessage(senderID, "Message with attachment received");
