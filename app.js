@@ -269,6 +269,10 @@ function receivedMessage(event) {
     case 'plans':
     sendPlansMessage(senderID);
     break;
+
+    case 'my id':
+    sendTextMessage(senderID, "Your facebook Id: " + senderID);
+    break;
     // ./ Customized For CME BOT
       case 'image':
         sendImageMessage(senderID);
