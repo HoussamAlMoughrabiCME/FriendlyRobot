@@ -328,8 +328,14 @@ function receivedMessage(event) {
 
       default:
         //sendTextMessage(senderID, "Hey John, how can I help you?");
-        sendOffersMessage(senderID);
+        //sendOffersMessage(senderID);
         sendAccountOptionsMessage(senderID);
+
+        sendTextMessage(senderID, "Offer Plans");
+        sendPlansMessage(senderID);
+        
+        sendTextMessage(senderID, "Promotions");
+        sendPromotionsMessage(senderID);
     }
   }
   else if(messageText.toLowerCase().indexOf("#v")>-1) {
@@ -398,8 +404,12 @@ function receivedPostback(event) {
   switch (payload) {
     case "GET_STARTED_PAYLOAD":
     //sendTextMessage(senderID, "Hey John, how can I help you?");
-    sendOffersMessage(senderID);
+    //sendOffersMessage(senderID);
     sendAccountOptionsMessage(senderID);
+    sendTextMessage(senderID, "Offer Plans");
+    sendPlansMessage(senderID);
+    sendTextMessage(senderID, "Promotions");
+    sendPromotionsMessage(senderID);
     break;
 
     case "PLANS_PAYLOAD":
