@@ -1,0 +1,4 @@
+TODO Digicel:
+ - Add all plans
+ - Add Menu buttons postback for (My Account, Help, Latest)
+ - Add Login Page
