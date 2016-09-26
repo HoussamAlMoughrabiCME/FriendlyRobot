@@ -331,8 +331,6 @@ function receivedMessage(event) {
         //sendOffersMessage(senderID);
         sendAccountOptionsMessage(senderID);
         sendPromotionsMessage(senderID);
-
-
         //sendTextMessage(senderID, "Offer Plans");
         //sendPlansMessage(senderID);
         //sendTextMessage(senderID, "Promotions");
