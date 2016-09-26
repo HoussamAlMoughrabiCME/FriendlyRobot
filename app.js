@@ -329,8 +329,7 @@ function receivedMessage(event) {
       default:
         //sendTextMessage(senderID, "Hey John, how can I help you?");
         //sendOffersMessage(senderID);
-        sendAccountOptionsMessage(senderID);
-        sendPromotionsMessage(senderID);
+        InitConversation(senderID)
         //sendTextMessage(senderID, "Offer Plans");
         //sendPlansMessage(senderID);
         //sendTextMessage(senderID, "Promotions");
@@ -384,6 +383,12 @@ function receivedDeliveryConfirmation(event) {
  * https://developers.facebook.com/docs/messenger-platform/webhook-reference/postback-received
  *
  */
+ function InitConversation(senderID)
+ {
+   sendAccountOptionsMessage(senderID);
+   sendPromotionsMessage(senderID);
+ }
+
 function receivedPostback(event) {
   var senderID = event.sender.id;
   var recipientID = event.recipient.id;
@@ -402,13 +407,14 @@ function receivedPostback(event) {
   //CME Customized
   switch (payload) {
     case "GET_STARTED_PAYLOAD":
+    InitConversation(senderID);
     //sendTextMessage(senderID, "Hey John, how can I help you?");
     //sendOffersMessage(senderID);
-    sendAccountOptionsMessage(senderID);
-    sendTextMessage(senderID, "Offer Plans");
-    sendPlansMessage(senderID);
-    sendTextMessage(senderID, "Promotions");
-    sendPromotionsMessage(senderID);
+    //sendAccountOptionsMessage(senderID);
+    //sendTextMessage(senderID, "Offer Plans");
+    //sendPlansMessage(senderID);
+    //sendTextMessage(senderID, "Promotions");
+    //sendPromotionsMessage(senderID);
     break;
 
     case "PLANS_PAYLOAD":
