@@ -406,6 +406,10 @@ function receivedPostback(event) {
 
   //CME Customized
   switch (payload) {
+    case "BUY_PLAN_PAYLOAD":
+    sendTextMessage(senderID, "Plan activated successfully, 200JMD were deduced from your balance.");
+    break;
+
     case "GET_STARTED_PAYLOAD":
     InitConversation(senderID);
     //sendTextMessage(senderID, "Hey John, how can I help you?");
