@@ -396,6 +396,12 @@ function receivedPostback(event) {
 
   //CME Customized
   switch (payload) {
+    case "GET_STARTED_PAYLOAD":
+    sendTextMessage(senderID, "Hey John, how can I help you?");
+    sendOffersMessage(senderID);
+    sendAccountOptionsMessage(senderID);
+    break;
+
     case "PLANS_PAYLOAD":
     sendTextMessage(senderID, "Offer Plans");
     sendPlansMessage(senderID);
