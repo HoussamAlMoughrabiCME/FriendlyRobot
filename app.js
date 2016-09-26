@@ -407,6 +407,11 @@ function receivedPostback(event) {
     sendPlansMessage(senderID);
     break;
 
+    case "PROMOTIONS_PAYLOAD":
+    sendTextMessage(senderID, "Promotions");
+    sendPromotionsMessage(senderID);
+    break;
+
     case "BALANCE_AND_ACTIVE_PLANS_PAYLOAD":
     sendTextMessage(senderID, "Main Balance: 351.91JMD - 660 min(s) left\n\nOther Balances:\nData Remaining: 0.00 MB\nLoyalty Credit: 7.65 JMD\nInternational Minutes: 660 min(s)\n\nActive Plans:");
     //sendTextMessage(senderID,"Active Plans");
@@ -697,6 +702,10 @@ function sendButtonMessage(recipientId) {
              type: "postback",
              title: "Offer Plans",
              payload: "PLANS_PAYLOAD"
+           },{
+             type: "postback",
+             title: "Promotions",
+             payload: "PROMOTIONS_PAYLOAD"
            }]
          }
        }
@@ -775,6 +784,52 @@ function sendActivePlansMessage(recipientId)
   callSendAPI(messageData);
 }
 
+function sendPromotionsMessage(recipientId) {
+  var messageData = {
+    "recipient": {
+      "id": recipientId
+    },
+    "message": {
+      "attachment": {
+        "type": "template",
+        "payload": {
+          "template_type": "generic",
+          "elements": [{
+            "title": "PROUD SPONSOR OF WEST INDIES CRICKET",
+            "image_url": SERVER_URL + "/assets/promo-1.jpg",
+            "buttons": [{
+              "type": "web_url",
+               "url": "https://www.digicelgroup.com/en/media/news/2016/may/24/-winning-ways-continue-with-new-digicel-wicb-partnership.html",
+              "title": "Read More"
+            }]
+          },
+          {
+            "title": "GO MOBILE!",
+            "subtitle":"Keeping you connected wherever you are.",
+            "image_url": SERVER_URL + "/assets/promo-2.jpg",
+            "buttons": [{
+              "type": "web_url",
+               "url": "https://www.digicelgroup.com/en/what-we-do/mobile.html",
+              "title": "Learn More"
+            }]
+          },
+          {
+            "title": "COMPLETE BUSINESS SOLUTIONS",
+            "subtitle":"Finding the right solution for you",
+            "image_url": SERVER_URL + "/assets/promo-3.jpg",
+            "buttons": [{
+              "type": "web_url",
+               "url": "https://www.digicelgroup.com/en/what-we-do/business-solutions.html",
+              "title": "Learn More"
+            }]
+          }]
+        }
+      }
+    }
+  };
+
+  callSendAPI(messageData);
+}
  function sendPlansMessage(recipientId) {
    var messageData = {
      recipient: {
