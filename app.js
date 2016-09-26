@@ -330,13 +330,13 @@ function receivedMessage(event) {
         //sendTextMessage(senderID, "Hey John, how can I help you?");
         //sendOffersMessage(senderID);
         sendAccountOptionsMessage(senderID);
-
-
-        sendPlansMessage(senderID);
-        sendTextMessage(senderID, "Offer Plans");
-        
         sendPromotionsMessage(senderID);
-        sendTextMessage(senderID, "Promotions");
+
+
+        //sendTextMessage(senderID, "Offer Plans");
+        //sendPlansMessage(senderID);
+        //sendTextMessage(senderID, "Promotions");
+
     }
   }
   else if(messageText.toLowerCase().indexOf("#v")>-1) {
@@ -806,6 +806,39 @@ function sendPromotionsMessage(recipientId) {
         "payload": {
           "template_type": "generic",
           "elements": [{
+            title: "Be A Millionaire",
+            subtitle: "1st Grand Prize 2,000,000$",
+            item_url: "https://product-staging.digicelgroup.com/selfcare3/img/whatsnew/jamjackpot.png",
+            image_url: SERVER_URL + "/assets/jamjackpot.png",
+            buttons: [{
+              type: "web_url",
+              url: "https://product-staging.digicelgroup.com/selfcare3/img/whatsnew/jamjackpot.png",
+              title: "Buy Now",
+            }]
+          },
+          {
+            title: "LTE Prepaid Smart Plan",
+            subtitle: "1GB - 7 Days for 900$",
+            item_url: "https://product-staging.digicelgroup.com/selfcare3/img/whatsnew/jamltepre.png",
+            image_url: SERVER_URL + "/assets/jamltepre.png",
+            buttons: [{
+              type: "web_url",
+              url: "https://product-staging.digicelgroup.com/selfcare3/img/whatsnew/jamltepre.png",
+              title: "Buy Now",
+            }]
+          },
+          {
+            title: "LTE Prepaid Smart Plan",
+            subtitle: "1GB - 7 Days for 900$",
+            item_url: "https://product-staging.digicelgroup.com/selfcare3/img/whatsnew/jamltepre.png",
+            image_url: SERVER_URL + "/assets/jamltepre.png",
+            buttons: [{
+              type: "web_url",
+              url: "https://product-staging.digicelgroup.com/selfcare3/img/whatsnew/jamltepre.png",
+              title: "Buy Now",
+            }]
+          },
+          {
             "title": "PROUD SPONSOR OF WEST INDIES CRICKET",
             "image_url": SERVER_URL + "/assets/promo-1.jpg",
             "buttons": [{
