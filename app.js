@@ -327,7 +327,7 @@ function receivedMessage(event) {
         break;
 
       default:
-        sendTextMessage(senderID, "Hey John, how can I help you?");
+        //sendTextMessage(senderID, "Hey John, how can I help you?");
         sendOffersMessage(senderID);
         sendAccountOptionsMessage(senderID);
     }
@@ -397,7 +397,7 @@ function receivedPostback(event) {
   //CME Customized
   switch (payload) {
     case "GET_STARTED_PAYLOAD":
-    sendTextMessage(senderID, "Hey John, how can I help you?");
+    //sendTextMessage(senderID, "Hey John, how can I help you?");
     sendOffersMessage(senderID);
     sendAccountOptionsMessage(senderID);
     break;
@@ -717,7 +717,7 @@ function sendButtonMessage(recipientId) {
          type: "template",
          payload: {
            template_type: "button",
-           text: "Your account options:",
+           text: "Account Details",
            buttons:[{
              type: "postback",
              title: "My Balance & Plans",
