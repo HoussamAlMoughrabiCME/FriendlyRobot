@@ -410,6 +410,11 @@ function receivedPostback(event) {
     sendTextMessage(senderID, "Plan activated successfully, 200JMD were deduced from your balance. Thank you.");
     break;
 
+    case "BUY_PLAN_NO_ENOUGH_CREDIT_PAYLOAD":
+    sendTextMessage(senderID, "You do not have enough credit to activate this plan, please recharge and reactivate it.");
+    sendTextMessage(senderID,"To recharge please enter your voucher code followed by #v:");
+    break;
+
     case "GET_STARTED_PAYLOAD":
     InitConversation(senderID);
     //sendTextMessage(senderID, "Hey John, how can I help you?");
@@ -829,7 +834,7 @@ function sendPromotionsMessage(recipientId) {
             image_url: SERVER_URL + "/assets/jamltepre.png",
             buttons: [{
               type: "postback",
-              payload: "BUY_PLAN_PAYLOAD",
+              payload: "BUY_PLAN_NO_ENOUGH_CREDIT_PAYLOAD",
               title: "Buy Now"
             }]
           },
