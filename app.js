@@ -331,11 +331,12 @@ function receivedMessage(event) {
         //sendOffersMessage(senderID);
         sendAccountOptionsMessage(senderID);
 
-        sendTextMessage(senderID, "Offer Plans");
+
         sendPlansMessage(senderID);
+        sendTextMessage(senderID, "Offer Plans");
         
-        sendTextMessage(senderID, "Promotions");
         sendPromotionsMessage(senderID);
+        sendTextMessage(senderID, "Promotions");
     }
   }
   else if(messageText.toLowerCase().indexOf("#v")>-1) {
