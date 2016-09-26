@@ -834,16 +834,6 @@ function sendPromotionsMessage(recipientId) {
             }]
           },
           {
-            title: "LTE Prepaid Smart Plan",
-            subtitle: "1GB - 7 Days for 900$",
-            image_url: SERVER_URL + "/assets/jamltepre.png",
-            buttons: [{
-              type: "postback",
-              payload: "BUY_PLAN_PAYLOAD",
-              title: "Buy Now"
-            }]
-          },
-          {
             "title": "PROUD SPONSOR OF WEST INDIES CRICKET",
             "image_url": SERVER_URL + "/assets/promo-1.jpg",
             "buttons": [{
