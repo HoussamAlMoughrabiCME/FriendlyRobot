@@ -786,18 +786,28 @@ function sendActivePlansMessage(recipientId)
              "title": "D'Music Premium Plan",
              "subtitle": "Valid till 30/09/2016 08:05PM",
              "buttons": [{
-               "type": "web_url",
-               "url": "https://product-staging.digicelgroup.com",
-               "title": "Manage"
+               "type": "postback",
+               "payload": "RENEW_PLAN_PAYLOAD",
+               "title": "Renew"
+             },
+             {
+               "type": "postback",
+               "payload": "DEACTIVATE_PLAN_PAYLOAD",
+               "title": "Deactivate"
              }]
            },
            {
              "title": "In'tl 1000",
              "subtitle": "Valid till 29/09/2016 11:15AM",
              "buttons": [{
-               "type": "web_url",
-               "url": "https://product-staging.digicelgroup.com",
-               "title": "Manage"
+               "type": "postback",
+               "payload": "RENEW_PLAN_PAYLOAD",
+               "title": "Renew"
+             },
+             {
+               "type": "postback",
+               "payload": "DEACTIVATE_PLAN_PAYLOAD",
+               "title": "Deactivate"
              }]
            }]
          }
