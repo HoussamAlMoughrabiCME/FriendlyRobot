@@ -1160,7 +1160,7 @@ function sendAccountLinking(recipientId) {
           "template_type": "generic",
           "elements": [{
             "title": "Welcome to Digicel",
-            "image_url": SERVER_URL + "/assets/slide6.png",
+            "image_url": SERVER_URL + "/assets/small-logo.png",
             "buttons": [{
               "type": "account_link",
                "url": SERVER_URL + "/authorize"
