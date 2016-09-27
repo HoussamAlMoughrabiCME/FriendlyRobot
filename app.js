@@ -130,7 +130,7 @@ app.get('/authorize', function(req, res) {
 
   // Authorization Code should be generated per user by the developer. This will
   // be passed to the Account Linking callback.
-  var authCode = "1234567890";
+  var authCode = "1234567891";
 
   // Redirect users to this URI on successful login
   var redirectURISuccess = redirectURI + "&authorization_code=" + authCode;
