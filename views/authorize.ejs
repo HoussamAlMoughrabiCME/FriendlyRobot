@@ -23,17 +23,17 @@ LICENSE file in the root directory of this source tree.
       <img src="https://cmefriendlyrobot.herokuapp.com/assets/small-logo.png" class="img-responsive" style="max-width: 220px; margin: auto;" alt="Digicel">
   </div>
   <div class="col-md-12">
-    <form>
+    <form method="get" action="<%= redirectURISuccess %>">
   <div class="form-group">
     <label for="phone-number">Phone Number</label>
-    <input type="tel" class="form-control" id="phone-number" placeholder="Phone Number">
+    <input type="tel" class="form-control" id="phone-number" placeholder="Phone Number" required>
   </div>
   <div class="form-group">
     <label for="password">Password</label>
-    <input type="password" class="form-control" id="password" placeholder="Password">
+    <input type="password" class="form-control" id="password" placeholder="Password" required>
   </div>
   <div class="form-group text-center">
-    <a href="<%= redirectURISuccess %>" class="btn btn-primary" style="width: 100%; background: #e52a1b; border: 1px solid #e52a1b;">Login</a>
+    <button type="submit" class="btn btn-primary" style="width: 100%; background: #e52a1b; border: 1px solid #e52a1b;">Login</button>
   </div>
   </form>
   </div>
