@@ -1202,16 +1202,16 @@ function sendAccountLinking(recipientId) {
    }, function (error, response, body) {
      if (!error && response.statusCode == 200) {
        var recipientId = body.recipient;
-       alert(recipientId);
+       //alert(recipientId);
        if (recipientId) {
-         alert(recipientId);
+         //alert(recipientId);
           InitConversation(recipientId);
        } else {
-         alert("error");
+         //alert("error");
        console.log("error in get");
        }
      } else {
-       alert(response.error);
+       //alert(response.error);
        console.error(response.error);
      }
    });
