@@ -144,15 +144,15 @@ app.get('/authorize', function(req, res) {
 
 
 app.get('/validateAuth', function(req, res) {
-  var accountLinkingToken = req.query['account_linking_token'];
+  var account_linking_token = req.query['account_linking_token'];
   //var redirectURI = req.query['redirect_uri'];
 
   // Redirect users to this URI on successful login
   //InitConversation(1394374867244519);
-  callAuthorizeCallBack(accountLinkingToken);
+  //callAuthorizeCallBack(account_linking_token);
 
   res.render('validateAuth', {
-    accountLinkingToken: accountLinkingToken,
+    accountLinkingToken: account_linking_token,
     //redirectURI: redirectURI,
   });
 });
