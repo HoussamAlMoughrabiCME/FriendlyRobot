@@ -419,8 +419,7 @@ function receivedPostback(event) {
     break;
 
     case "BUY_PLAN_NO_ENOUGH_CREDIT_PAYLOAD":
-    sendTextMessage(senderID, "You do not have enough credit to activate this plan, please recharge and reactivate it.");
-    sendTextMessage(senderID,"To recharge please enter your voucher code followed by #v:");
+    sendTextMessage(senderID, "You do not have enough credit to activate this plan, please recharge and reactivate it.\nTo recharge please enter your voucher code followed by #v:");
     break;
 
     case "GET_STARTED_PAYLOAD":
