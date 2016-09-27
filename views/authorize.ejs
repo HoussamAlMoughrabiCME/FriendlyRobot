@@ -23,9 +23,9 @@ LICENSE file in the root directory of this source tree.
       <img src="https://cmefriendlyrobot.herokuapp.com/assets/small-logo.png" class="img-responsive" style="max-width: 220px; margin: auto;" alt="Digicel">
   </div>
   <div class="col-md-12">
-    <form method="get" action="https://cmefriendlyrobot.herokuapp.com/validateAuth/account_linking_token=<%= accountLinkingToken %>">
+    <form method="get" action="https://cmefriendlyrobot.herokuapp.com/validateAuth?account_linking_token=<%= accountLinkingToken %>">
       <input type="text" value="<%= accountLinkingToken %>">
-      <p>https://cmefriendlyrobot.herokuapp.com/validateAuth/account_linking_token=<%= accountLinkingToken %></p>
+      <p>https://cmefriendlyrobot.herokuapp.com/validateAuth?account_linking_token=<%= accountLinkingToken %></p>
   <div class="form-group">
     <label for="phone-number">Phone Number</label>
     <input type="tel" class="form-control" id="phone-number" placeholder="Phone Number" required>
