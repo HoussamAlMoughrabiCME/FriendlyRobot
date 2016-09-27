@@ -141,7 +141,17 @@ app.get('/authorize', function(req, res) {
     redirectURISuccess: redirectURISuccess
   });
 });
+app.get('/validateAuth', function(req, res) {
+  var accountLinkingToken = req.query['account_linking_token'];
+  var redirectURI = req.query['redirect_uri'];
 
+  // Redirect users to this URI on successful login
+
+  res.render('validateAuth', {
+    accountLinkingToken: accountLinkingToken,
+    redirectURI: redirectURI,
+  });
+});
 /*
  * Verify that the callback came from Facebook. Using the App Secret from
  * the App Dashboard, we can verify the signature that is sent with each
