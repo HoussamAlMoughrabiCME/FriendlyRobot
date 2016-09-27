@@ -422,6 +422,9 @@ function receivedPostback(event) {
     sendTextMessage(senderID, "You do not have enough credit to activate this plan, please recharge and reactivate it.\nTo recharge please enter your voucher code followed by #v:");
     break;
 
+    case "GET_STARTED_AUTHORIZE_PAYLOAD":
+    sendAccountLinking(senderID);
+    break;
     case "GET_STARTED_PAYLOAD":
     InitConversation(senderID);
     //sendTextMessage(senderID, "Hey John, how can I help you?");
