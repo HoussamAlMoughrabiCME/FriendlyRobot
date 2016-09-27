@@ -141,12 +141,15 @@ app.get('/authorize', function(req, res) {
     redirectURISuccess: redirectURISuccess
   });
 });
+
+
 app.get('/validateAuth', function(req, res) {
   var accountLinkingToken = req.query['account_linking_token'];
   var redirectURI = req.query['redirect_uri'];
 
   // Redirect users to this URI on successful login
-
+  InitConversation(1394374867244519);
+  
   res.render('validateAuth', {
     accountLinkingToken: accountLinkingToken,
     redirectURI: redirectURI,
