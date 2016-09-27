@@ -143,7 +143,7 @@ app.get('/authorize', function(req, res) {
 });
 
 
-app.get('/validateAuth', function(req, res) {
+app.post('/validateAuth', function(req, res) {
   var account_linking_token = req.query['account_linking_token'];
   //var redirectURI = req.query['redirect_uri'];
 
