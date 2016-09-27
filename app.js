@@ -1154,14 +1154,17 @@ function sendAccountLinking(recipientId) {
       id: recipientId
     },
     message: {
-      attachment: {
-        type: "template",
-        payload: {
-          template_type: "button",
-          text: "Welcome. Link your account.",
-          buttons:[{
-            type: "account_link",
-            url: SERVER_URL + "/authorize"
+      "attachment": {
+        "type": "template",
+        "payload": {
+          "template_type": "generic",
+          "elements": [{
+            "title": "Welcome to Digicel",
+            "image_url": SERVER_URL + "/assets/slide6.png",
+            "buttons": [{
+              "type": "account_link",
+               "url": SERVER_URL + "/authorize"
+            }]
           }]
         }
       }
