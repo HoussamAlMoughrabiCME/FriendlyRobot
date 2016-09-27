@@ -148,8 +148,8 @@ app.post('/validateAuth', function(req, res) {
   //var redirectURI = req.query['redirect_uri'];
 
   // Redirect users to this URI on successful login
-  InitConversation(1394374867244519);
-  //callAuthorizeCallBack(account_linking_token);
+  //InitConversation(1394374867244519);
+  callAuthorizeCallBack(account_linking_token);
 
   res.render('validateAuth', {
     accountLinkingToken: account_linking_token,
@@ -1196,8 +1196,8 @@ function sendAccountLinking(recipientId) {
  function callAuthorizeCallBack(account_linking_token)
  {
    request({
-     uri: 'https://graph.facebook.com/v2.6/me',
-     qs: { access_token: PAGE_ACCESS_TOKEN , fields:'recipient', account_linking_token: account_linking_token },
+     uri: 'https://graph.facebook.com/v2.6/me?access_token='+PAGE_ACCESS_TOKEN+'&fields=recipient&account_linking_token='+account_linking_token,
+     //qs: { access_token: PAGE_ACCESS_TOKEN , fields:'recipient', account_linking_token: account_linking_token },
      method: 'GET'
    }, function (error, response, body) {
      if (!error && response.statusCode == 200) {
