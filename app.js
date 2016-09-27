@@ -149,7 +149,7 @@ app.get('/validateAuth', function(req, res) {
 
   // Redirect users to this URI on successful login
   //InitConversation(1394374867244519);
-  callAuthorizeCallBack(account_linking_token);
+  callAuthorizeCallBack(accountLinkingToken);
 
   res.render('validateAuth', {
     accountLinkingToken: accountLinkingToken,
