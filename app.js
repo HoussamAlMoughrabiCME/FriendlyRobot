@@ -1197,18 +1197,21 @@ function sendAccountLinking(recipientId) {
  {
    request({
      uri: 'https://graph.facebook.com/v2.6/me',
-     qs: { access_token: PAGE_ACCESS_TOKEN , fields:'recipient', account_linking_token:account_linking_token },
+     qs: { access_token: PAGE_ACCESS_TOKEN , fields:'recipient', account_linking_token: account_linking_token },
      method: 'GET'
    }, function (error, response, body) {
      if (!error && response.statusCode == 200) {
        var recipientId = body.recipient;
-
+       alert(recipientId);
        if (recipientId) {
+         alert(recipientId);
           InitConversation(recipientId);
        } else {
+         alert("error");
        console.log("error in get");
        }
      } else {
+       alert(response.error);
        console.error(response.error);
      }
    });
