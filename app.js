@@ -407,7 +407,7 @@ function receivedPostback(event) {
   //CME Customized
   switch (payload) {
     case "RENEW_PLAN_PAYLOAD":
-    sendTextMessage(senderID, "Plan has been renewed valid until 02/01/2017 12:00AM, 150JMD were deduced from your balance. Thank you.");
+    sendTextMessage(senderID, "Plan has been renewed and valid until 02/01/2017 12:00AM, 150JMD were deduced from your balance. Thank you.");
     break;
 
     case "DEACTIVATE_PLAN_PAYLOAD":
